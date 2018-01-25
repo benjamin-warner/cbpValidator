@@ -1,3 +1,3 @@
-function adder(a, b){
-	return a+b;
+function validateCBPList(cbpList){
+	return "YES"
 }
