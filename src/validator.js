@@ -2,7 +2,8 @@ function validateCBPList(cbpList){
 	console.log(cbpList)
 	var stack = []
 	var firstSymbol = cbpList.charAt(0)
-	if(isCloser(firstSymbol)){
+	var lastSymbol = cbpList.charAt(cbpList.length-1)
+	if(isCloser(firstSymbol) || !isCloser(lastSymbol)){
 		return "NO"
 	}
 
