@@ -11,6 +11,10 @@ function validateCBPList(cbpList){
 	stack.push(firstSymbol)
 	
 	for(var i = 1; i < cbpList.length; i++){
+		console.log("Stack state at ", i , stack)
+		if(stack.length == 0){
+			return "NO"
+		}
 		var nextSymbol = cbpList.charAt(i)
 		var stackTop = stack[stack.length - 1]
 		if(doesNextSymbolClosePair(stackTop, nextSymbol)){
